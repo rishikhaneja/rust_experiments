@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.12)
+project(mylibrary)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Add your source files here
+set(SOURCES
+    src/mylibrary.cpp
+)
+
+# Add your header files here
+set(HEADERS
+    include/mylibrary.h
+)
+
+# Create the static library
+add_library(mylibrary STATIC ${SOURCES} ${HEADERS})
+
+# Specify include directories
+target_include_directories(mylibrary PUBLIC include)
+
+# Install the library
+install(TARGETS mylibrary
+    ARCHIVE DESTINATION ${CMAKE_CURRENT_LIST_DIR}/lib
+    LIBRARY DESTINATION ${CMAKE_CURRENT_LIST_DIR}/lib
+    RUNTIME DESTINATION ${CMAKE_CURRENT_LIST_DIR}/lib)
+
