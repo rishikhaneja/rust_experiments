@@ -3,7 +3,11 @@
 
 #include <stdint.h>
 
-extern "C" {
+// extern "C" {
+//     int add_numbers(int a, int b);
+// }
+
+namespace mylibrary {
     int add_numbers(int a, int b);
 }
 

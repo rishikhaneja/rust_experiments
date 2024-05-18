@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build mylibrary vs2019 debug",
+            "type": "shell",
+            "command": "${workspaceFolder}/ffi/mylibrary/build_vs2019.bat",
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "generate bindings",
+            "type": "shell",
+            "command": "${workspaceFolder}/ffi/generate_bindings.bat",
+            "problemMatcher": []
+        },
+        {
+            "label": "run ffi",
+            "type": "shell",
+            "command": "cargo run --bin ffi",
+            "problemMatcher": []            
+        }
+    ]
+}

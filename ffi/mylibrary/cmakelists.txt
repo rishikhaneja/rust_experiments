@@ -10,7 +10,7 @@ set(SOURCES
 
 # Add your header files here
 set(HEADERS
-    include/mylibrary.h
+    include/mylibrary.hpp
 )
 
 # Create the static library
